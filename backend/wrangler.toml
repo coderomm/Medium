@@ -1,0 +1,12 @@
+name = "backend"
+main = "src/index.ts"
+compatibility_date = "2023-12-01"
+compatibility_flags = [ "nodejs_compat" ]
+
+[vars]
+DATABASE_URL=""
+JWT_SECRET = ""
+
+[observability]
+enabled = true
+head_sampling_rate = 1 # optional. default = 1.
