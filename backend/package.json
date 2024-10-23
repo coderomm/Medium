@@ -4,14 +4,14 @@
     "deploy": "wrangler deploy --minify src/index.ts"
   },
   "dependencies": {
-    "@coderom/medium-blog": "^1.0.0",
-    "@prisma/client": "^5.10.2",
+    "@coderom/medium-blog": "^1.1.1",
+    "@prisma/client": "^5.21.1",
     "@prisma/extension-accelerate": "^0.6.3",
-    "hono": "^4.0.5",
-    "prisma": "^5.21.0"
+    "hono": "^4.0.5"
   },
   "devDependencies": {
     "@cloudflare/workers-types": "^4.20240208.0",
+    "prisma": "^5.21.1",
     "wrangler": "^3.25.0"
   }
 }
