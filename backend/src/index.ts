@@ -1,20 +1,17 @@
 import { Hono } from 'hono'
 import { blogRouter } from './routes/blog';
 import { userRouter } from './routes/user';
+import { cors } from 'hono/cors';
 
 type Bindings = {
   DATABASE_URL: string
   JWT_SECRET: string,
 }
-type Variables = {
-  userId: string
-}
 
 const app = new Hono<{
   Bindings: Bindings,
-  Variables: Variables
 }>();
-
+app.use('/*', cors())
 app.get('/', (c: any) => {
   return c.json({
     ok: true,
